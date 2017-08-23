@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>海淘折扣</title>
+    <link rel="icon" type="image/x_icon" href="favicon.ico">
+    <link rel="stylesheet" type="" href="../script/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/list.css">
+    <script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+    <script src="../script/libs/artTemplate/template.js"> </script>
+    <script src="../script/libs/bootstrap/js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="index-layout">
+        <header>
+            <div class="back">
+                <a href="../index.html" class="glyphicon glyphicon-menu-left"></a>
+            </div>
+            <h1> 海淘折扣 </h1>
+            <div class="home">
+                <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+            </div>
+        </header>
+    </div>
+    <!--main部分-->
+    <div>
+        <div class="container">
+            <div class="cu_list">
+                <ul>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <div class="page_foot" data-pageid=1>
+            <a id="pre">上一页</a>
+            <select></select>
+            <a id="next">下一页</a>
+        </div>
+        <div class="nav_foot">
+            <a href="../index.html"><span>首页</span></a>
+            <span>&gt</span>
+            <span>省钱控</span>
+            <span>&gt</span>
+            <span>海淘折扣</span>
+        </div>
+        <div class="foot_top">
+
+            <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+            <a href="reg.aspx">注册</a> <a href="#" style="width: 40%; border: 0;">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部</a>
+        </div>
+        <div class="foot_last">
+            <p>
+                <a id="bb" href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a>                <a href="http://m.manmanbuy.com">
+                    慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+                <img src="http://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2f&amp;rnd=724427416" width="0"
+                    height="0">
+            </p>
+        </div>
+    </div>
+</body>
+<script type="template/html" id="tpl_main">
+    <ul>
+        {{each result as value i}}
+        <li class="tao_list clearfix" data-pageid="1">
+            <a href="prodMsg.html?productid={{value.productId}}">
+               {{#value.productImgSm}}
+            </a>
+            <div class="info clearfix">
+                <div class="title">
+                   {{value.productName}}
+                    <span>{{value.productPinkage}}</span>
+                </div>
+                <div class="other">
+                    <span class="mall">{{value.productFrom}}</span>
+                    <span class="comment"><i class="icon-comment"></i>{{value.productComCount}}</span>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script src="../script/js/xmhlist.js"></script>
+</html>

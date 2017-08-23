@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>白菜价</title>
+  <link rel="icon" type="image/x_icon" href="favicon.ico">
+  <link rel="stylesheet" href="../css/vage.css" />
+  <link rel="stylesheet" href="../css/fonts/style.css" />
+  <link rel="stylesheet" href="../script/libs/bootstrap/css/bootstrap.css" />
+  <script src="../script/libs/jQuery/jquery-1.11.3.min.js"></script>
+  <script src='../script/libs/artTemplate/template.js'></script>
+  <script src='../script/libs/bootstrap/js/bootstrap.min.js'></script>
+  <script  src="../script/libs/iscroll/iscroll.js"></script>
+</head>
+
+<body>
+  <!--头部-->
+  <div class='head'>
+    <div class='prev'>
+      <!--返回首页-->
+      <a href="../index.html">
+        <i class='icon-arrow-left2'></i>
+      </a>
+    </div>
+    <h2>白菜价-淘宝内部券</h2>
+    <div class='home'>
+      <!--app下载-->
+      <a href="http://m.manmanbuy.com/?o=download"></a>
+    </div>
+  </div>
+  <!--中间列表部分-->
+  <div class='content' >
+    <div id='wrapp'>
+       <ul class="nav nav-tabs" role="tablist"  id='ll'>
+      </ul>
+      <div class="tab-content" id='tab'>
+        
+    </div>
+     </div>
+  </div>
+  <!--底部-->
+  <div class='foot'>
+    <div class='f_nav'>
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a href="#top">回到顶部</a>
+    </div>
+    <div class='f_text'>
+      <p>慢慢买手机版<a href="#">-掌上比价平台</a></p>
+      <p><a href="#">m.manmanbuy.com</a></p>
+    </div>
+  </div>
+  <!--箭头-->
+  <div class='rock'>
+    <a href="#top">
+      TOP
+    </a>
+  </div>
+</body>
+
+</html>
+<script type='text/template' id='list'>
+{{each result as v}}
+  <li  role="presentation"  data-id='{{v.titleId}}'>
+    <a href="#{{v.title}}" aria-controls="{{v.title}}" role="tab" data-toggle="tab" >{{v.title}}
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script type='text/template' id='con'>
+{{each result as v i}}
+<div role="tabpanel" class="tab-pane" id="{{v.titleId}}">
+  <ul>
+            <li>
+              <div class='l'>
+                {{#v.productImg}}
+              </div>
+              <div class='r'>
+                {{#v.productName}}
+                <p>{{#v.productPrice}}</p>
+                {{#v.productCouponRemain}}
+                <div class='tick'>
+                  {{#v.productCoupon}}
+                {{#v.productHref}}
+                </div>
+              </div>
+            </li>
+          </ul>
+</div>
+ {{/each}}
+</script>
+<script src='../script/js/vagelist.js'></script>

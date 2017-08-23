@@ -1,0 +1,282 @@
+.top {
+  height: 50px;
+  background-color: #296ecc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top .logo {
+  text-align: center;
+  padding-left: 20px;
+  line-height: 50px;
+}
+
+.top .logo img {
+  height: 25px;
+}
+
+.top .appDown {
+  line-height: 50px;
+  padding-right: 10px;
+}
+
+.top .appDown img {
+  height: 34px;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url("./dwfont/iconfont.eot");
+  src: url("./dwfont/iconfont.eot?#iefix") format("embedded-opentype"), url("./dwfont/iconfont.woff") format("woff"), url("./dwfont/iconfont.ttf") format("truetype"), url("./dwfont/iconfont.svg#iconfont") format("svg");
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  min-width: 320px;
+}
+
+.search {
+  height: 32px;
+  display: flex;
+  box-sizing: content-box;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  padding: 8px;
+}
+
+.search .text {
+  background-color: #f1f1f1;
+  flex: 1;
+  border-radius: 20px;
+  padding-left: 15px;
+}
+
+.search .btn {
+  padding: 0 10px 0 10px;
+  height: 28px;
+  margin-top: 3px;
+  margin-left: 10px;
+  border-radius: 20px;
+  background-color: #296ecc;
+  color: #FFF;
+}
+
+.select {
+  height: 40px;
+  border-bottom: 1px solid #e6e6e6;
+  line-height: 40px;
+}
+
+.select ul {
+  margin: 0px;
+  margin-left: 10px;
+}
+
+.select .sx {
+  margin: 7px 15px 0 0;
+  height: 24px;
+  width: 39px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 12px;
+  background: linear-gradient(to bottom, #e6e6e6, #ccc);
+  color: #fff;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+  padding: 10px 10px 0 10px;
+  position: relative;
+}
+
+.info .pic {
+  width: 100%;
+  height: 180px;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.info .wz {
+  font-size: 16px;
+}
+
+.info .zdj {
+  margin-top: 10px;
+}
+
+.info .zdj .dqzd {
+  color: #ccc;
+}
+
+.info .zdj .yxpl {
+  margin-left: 20px;
+}
+
+.info .zdj .yxpl span {
+  color: #ccc;
+}
+
+.argu {
+  padding-top: 20px;
+  background-color: #e6e6e6;
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.argu ul {
+  height: 38px;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.argu ul li {
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #ffd050;
+  width: 33.33%;
+}
+
+.argu ul li + li {
+  border-left: 1px solid #000;
+}
+
+.other {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+}
+
+.other div i {
+  font-size: 16px;
+  color: #fe0202;
+}
+
+.lowP {
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+.lowP .next {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.yy {
+  height: 35px;
+  background-color: #dbdbdb;
+  padding-top: 5px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.yy .line {
+  height: 1px;
+  border: 2px solid #7a7a7a;
+}
+
+.box {
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column;
+}
+
+.box .head .fl .name {
+  font-size: 12px;
+  color: #CCC;
+  padding-left: 2px;
+}
+
+.box .head .fl .star svg {
+  width: 18px;
+  height: 18px;
+}
+
+.box .head .fr {
+  font-size: 12px;
+  color: #ccc;
+}
+
+.box .content {
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+
+.box .line {
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 12px;
+  color: #ccc;
+  padding: 5px 0 5px 0;
+}
+
+.more {
+  width: 100%;
+  height: 80px;
+  background-color: #e6e6e6;
+  padding: 0 10px 0 10px;
+}
+
+.more button {
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #f1f1f1, #d4d4d4);
+  box-shadow: 1px 3px 2px #ccc;
+}
+
+.back {
+  background-color: #e6e6e6;
+}
+
+.back .row {
+  height: 34px;
+  line-height: 34px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.back .row > div {
+  text-align: center;
+  color: #333;
+}
+
+.back .row .log {
+  border-right: 1px solid #ccc;
+}
+
+.back .row .reg {
+  border-right: 1px solid #ccc;
+}
+
+.back .row .bt i {
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.back .appDown p {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.back .appDown .p1 {
+  margin-top: 15px !important;
+}

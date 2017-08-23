@@ -1,0 +1,119 @@
+/* 头部 */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    width: 100%;
+    height: 44px;
+    background-color: #ff8b00;
+    display: flex;
+}
+header .left a{
+    color:#fff;
+    display: inline-block;
+    width: 50px;
+    height: 44px;
+}
+header .left {
+    color: #fff;
+    line-height: 44px;
+    float: left;
+    margin-left: 10px;
+}
+
+header .center {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}
+
+header h1 {
+    font: normal normal 20px/44px '微软雅黑';
+}
+
+header .right a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    background-image: url(../images/header_app.png);
+    background-size: 34px 34px;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+
+header .right img {
+    width: 38px;
+    height: 38px;
+}
+/* 导航样式 */
+nav{
+    padding:10px;
+    width: 100%;
+    /* height: 100%; */
+}
+nav ul{
+    padding-left:20px;
+    padding-right:20px;
+}
+nav ul li{
+    float: left;
+    padding:10px;
+    border:1px solid #ccc;
+    margin-right:8px;
+    margin-bottom:8px;
+    background-color:#eee
+}
+nav ul li a{
+    font-size: 16px;
+    color:#233;
+}
+footer{
+    /* padding-top:10px; */
+    padding:10px 0px 10px;
+    background-color:#ddd;
+}
+footer .nav{
+    height:30px;
+    background-color:#ebebeb;
+    font:normal normal 16px/30px '微软雅黑';
+    padding-left:10px;
+    border-top:1px solid #999;
+    border-bottom:1px solid #999;
+}
+footer .nav a {
+    color:#233;
+}
+footer ul  {
+    margin-top:30px; 
+    display:flex;
+    text-align:center;
+    box-shadow:0px 0px 1px 1px #999;
+}
+footer ul li {
+    height: 34px;
+    flex:1;
+    font:normal 700 16px/34px '微软雅黑';
+}
+footer ul li:nth-child(2),li:nth-child(1){
+    border-right:1px solid #999;
+}
+footer ul li a {
+    color:#666;
+}
+footer .text{
+    text-align:center;
+    padding-top:20px;
+    color:#999;
+}
+footer .text a:nth-child(1){
+    color:red;
+}
+footer .text a:nth-child(2){
+    color:#233;
+}

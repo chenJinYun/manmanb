@@ -1,0 +1,386 @@
+body {
+  background-color: #fff;
+}
+
+header .top {
+  background-color: #ff841d;
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+}
+header .top #Logo {
+  float: left;
+  margin-left: 3px;
+  padding: 12px;
+}
+header .top #Logo a {
+  display: block;
+  height: 100%;
+}
+header .top #Logo a img {
+  max-height: 25px;
+}
+header .top #downLoad {
+  float: right;
+  padding: 7px;
+}
+header .top #downLoad a {
+  display: block;
+  height: 100%;
+}
+header .top #downLoad a img {
+  max-height: 34px;
+}
+header .search {
+  font-style: normal;
+  border-bottom: 1px solid #e6e6e6;
+}
+header .search .headSearch {
+  position: relative;
+  padding: 10px;
+  height: 30px;
+}
+header .search .headSearch .searchText input {
+  border: none;
+  background: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 90%;
+  padding-left: 5%;
+  font-size: 16px;
+  position: absolute;
+}
+header .search .headSearch .searchBtn input {
+  -webkit-appearance: none;
+  width: 63px;
+  background: #ff841d;
+  color: #FFFFFF;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  position: absolute;
+}
+
+section .aspnetForm {
+  background-color: RGB(242, 242, 242);
+}
+section .aspnetForm nav {
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+section .aspnetForm nav a {
+  color: #5a5a5a;
+}
+section .aspnetForm nav span {
+  color: #000;
+}
+section .aspnetForm .ultop .hd {
+  background: #f3f3f3;
+  border: 1px solid #c8c8c8;
+  border-left: none;
+  border-right: none;
+}
+section .aspnetForm .ultop .hd h3 {
+  line-height: 36px;
+  font-size: 14px;
+  padding-left: 10px;
+  color: #874604;
+  font-weight: bold;
+}
+section .aspnetForm .ultop .list ul li:nth-child(1) > a > em, section .aspnetForm .ultop .list ul li:nth-child(2) > a > em, section .aspnetForm .ultop .list ul li:nth-child(3) > a > em {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 20px;
+  vertical-align: top;
+  margin: 0 6px 0 0;
+  font-size: 14px;
+  font-style: normal;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+section .aspnetForm .ultop .list ul li:nth-child(1) > a > em {
+  background: #f10e0e;
+}
+section .aspnetForm .ultop .list ul li:nth-child(2) > a > em {
+  background: #ff9314;
+}
+section .aspnetForm .ultop .list ul li:nth-child(3) > a > em {
+  background: #8adf5b;
+}
+section .aspnetForm .ultop .list ul li {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+  background-position: right center;
+}
+section .aspnetForm .ultop .list ul li a .top {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 20px;
+  vertical-align: top;
+  margin: 0 6px 0 0;
+  font-size: 14px;
+  font-style: normal;
+  background: #8eb9f5;
+  font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;
+}
+section .aspnetForm .ultop .list ul li a .inner {
+  display: inline-block;
+}
+section .aspnetForm .ultop .list ul li a .inner .tit {
+  color: #000000;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-style: normal;
+  font-size: 16px;
+}
+section .aspnetForm .ultop .list ul li a .inner p {
+  font-size: 12px;
+  color: #999999;
+  margin-top: 3px;
+}
+section .aspnetForm .model .hd {
+  background: #f3f3f3;
+  border: 1px solid #c8c8c8;
+  border-left: none;
+  border-right: none;
+}
+section .aspnetForm .model .hd h3 {
+  line-height: 36px;
+  font-size: 14px;
+  padding-left: 10px;
+  color: #874604;
+  font-weight: bold;
+}
+section .aspnetForm .model .list ul li {
+  padding: 10px;
+  border-bottom: 1px solid #e7e7e7;
+}
+section .aspnetForm .model .list ul li a {
+  display: block;
+}
+section .aspnetForm .model .list ul li a .pic {
+  float: left;
+  margin-right: 10px;
+}
+section .aspnetForm .model .list ul li a .pic img {
+  width: 100px;
+  height: 100px;
+}
+section .aspnetForm .model .list ul li a .info {
+  font-size: 14px;
+  line-height: 24px;
+}
+section .aspnetForm .model .list ul li a .info .tit {
+  color: #333333;
+  line-height: 22px;
+  min-height: 44px;
+}
+section .aspnetForm .model .list ul li a .info .price {
+  height: 25px;
+  margin-top: 4px;
+}
+section .aspnetForm .model .list ul li a .info .price em {
+  font-size: 18px;
+  color: #ea3900;
+  vertical-align: middle;
+  float: left;
+}
+section .aspnetForm .model .list ul li a .info .price .star {
+  float: right;
+  margin-top: 2px;
+}
+section .aspnetForm .model .list ul li a .info .price .star .star5 {
+  display: block;
+  width: 94px;
+  height: 20px;
+  font-size: 18px;
+  color: #ea3900;
+  float: left;
+  background: url("../images/clqxxxxxxx.png");
+}
+section .aspnetForm .model .list ul li a .info .other {
+  font-size: 12px;
+  color: #999999;
+}
+section .aspnetForm .model .list ul li a .info .other em {
+  margin-right: 10px;
+}
+section .aspnetForm .comment .hd {
+  background: #f3f3f3;
+  border: 1px solid #c8c8c8;
+  border-left: none;
+  border-right: none;
+}
+section .aspnetForm .comment .hd h3 {
+  line-height: 36px;
+  font-size: 14px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+section .aspnetForm .comment .hd h3 a {
+  color: #874604;
+}
+section .aspnetForm .comment .details ul li {
+  padding: 10px;
+  border-bottom: 1px solid #e7e7e7;
+}
+section .aspnetForm .comment .details ul li a {
+  display: block;
+}
+section .aspnetForm .comment .details ul li a .protit {
+  height: 80px;
+  margin-bottom: 10px;
+}
+section .aspnetForm .comment .details ul li a .protit .pic {
+  float: left;
+  margin-right: 10px;
+}
+section .aspnetForm .comment .details ul li a .protit .pic img {
+  width: 80px;
+  height: 80px;
+}
+section .aspnetForm .comment .details ul li a .protit .tit {
+  color: #999999;
+  font-size: 14px;
+  line-height: 22px;
+  min-height: 44px;
+}
+section .aspnetForm .comment .details ul li .plbox {
+  color: #5a5a5a;
+  background: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #e7e7e7;
+  position: relative;
+}
+section .aspnetForm .comment .details ul li .plbox::before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 29px;
+  top: -8px;
+  border-bottom: 8px solid #f8f8f8;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+section .aspnetForm .comment .details ul li .plbox a {
+  color: #5a5a5a;
+}
+section .aspnetForm .comment .details ul li .plbox a .comName {
+  height: 25px;
+  margin-top: 4px;
+}
+section .aspnetForm .comment .details ul li .plbox a .comName em {
+  font-size: 18px;
+  color: #ea3900;
+  vertical-align: middle;
+}
+section .aspnetForm .comment .details ul li .plbox a .comName .star {
+  margin-top: -4px;
+  display: inline-block;
+}
+section .aspnetForm .comment .details ul li .plbox a .comName .star .star5 {
+  height: 18x;
+  font-size: 14px;
+  color: #ea3900;
+}
+section .aspnetForm .comment .details ul li .plbox a .comName .star .star5 svg {
+  height: 18px;
+}
+section .aspnetForm .comment .details ul li .plbox a .comName i {
+  float: right;
+}
+
+.promotionAdd {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: #faf8f5;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+}
+.promotionAdd .closefix {
+  background: url("../images/X.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  padding: 19px 12px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21px;
+  opacity: 1;
+}
+.promotionAdd .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 46px;
+  width: 41px;
+  height: 41px;
+  margin: auto;
+  background-image: url("../images/logo.png");
+  background-position: center;
+  background-size: 41px;
+}
+.promotionAdd .titlefix {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #888;
+  margin-left: 97px;
+  margin-right: 84px;
+  line-height: 1;
+}
+.promotionAdd .describe {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #999;
+  margin-left: 97px;
+  margin-right: 84px;
+  line-height: 1;
+}
+.promotionAdd .download-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 74px;
+  height: 23px;
+  padding-top: 10px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  background-color: #ff7700;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px #ff5500;
+  text-decoration: none;
+}

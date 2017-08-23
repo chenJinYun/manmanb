@@ -1,0 +1,182 @@
+body {
+  background-color: #fff;
+}
+
+header .top {
+  background-color: #ff841d;
+  height: 50px;
+  border-bottom: 1px solid #e6e6e6;
+}
+header .top #Logo {
+  float: left;
+  margin-left: 3px;
+  padding: 12px;
+}
+header .top #Logo a {
+  display: block;
+  height: 100%;
+}
+header .top #Logo a img {
+  max-height: 25px;
+}
+header .top #downLoad {
+  float: right;
+  padding: 7px;
+}
+header .top #downLoad a {
+  display: block;
+  height: 100%;
+}
+header .top #downLoad a img {
+  max-height: 34px;
+}
+header .search {
+  font-style: normal;
+  border-bottom: 1px solid #e6e6e6;
+}
+header .search .headSearch {
+  position: relative;
+  padding: 10px;
+  height: 30px;
+}
+header .search .headSearch .searchText input {
+  border: none;
+  background: #f1f1f1;
+  margin: 0px;
+  padding: 0px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  padding-left: 10px;
+  width: 90%;
+  padding-left: 5%;
+  font-size: 16px;
+  position: absolute;
+}
+header .search .headSearch .searchBtn input {
+  -webkit-appearance: none;
+  width: 63px;
+  background: #ff841d;
+  color: #FFFFFF;
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 15px;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  position: absolute;
+}
+
+section form {
+  background-color: RGB(242, 242, 242);
+}
+section form nav {
+  height: 36px;
+  background-color: #ebebeb;
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#ebebeb));
+  border-top: solid 1px #ebebeb;
+  border-bottom: 1px solid #ccc;
+  line-height: 36px;
+  padding-left: 8px;
+  font-size: 14px;
+}
+section form nav a {
+  color: #5a5a5a;
+}
+section form .ultop .title {
+  font-size: 16px;
+  color: #874604;
+  height: 40px;
+  padding-left: 10px;
+  line-height: 40px;
+  margin: 10px 5px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+section form .ultop .list {
+  padding: 0px 10px;
+}
+section form .ultop .list .flt a {
+  height: 40px;
+  background: url(../images/arrow1.gif) right center no-repeat;
+  line-height: 40px;
+  color: #000;
+  font-size: 16px;
+  display: block;
+  padding-left: 0px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.promotionAdd {
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+  display: block;
+  width: 100%;
+  height: 60px;
+  background-color: #faf8f5;
+  -webkit-transition: opacity .2s ease-out;
+  transition: opacity .2s ease-out;
+}
+.promotionAdd .closefix {
+  background: url("../images/X.png");
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 21px;
+  height: 21px;
+  padding: 19px 12px 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21px;
+  opacity: 1;
+}
+.promotionAdd .icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 46px;
+  width: 41px;
+  height: 41px;
+  margin: auto;
+  background-image: url("../images/logo.png");
+  background-position: center;
+  background-size: 41px;
+}
+.promotionAdd .titlefix {
+  margin-top: 12px;
+  margin-bottom: 0;
+  font-size: 18px;
+  color: #888;
+  margin-left: 97px;
+  margin-right: 84px;
+  line-height: 1;
+}
+.promotionAdd .describe {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #999;
+  margin-left: 97px;
+  margin-right: 84px;
+  line-height: 1;
+}
+.promotionAdd .download-btn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  width: 74px;
+  height: 23px;
+  padding-top: 10px;
+  margin: auto;
+  font-size: 13px;
+  line-height: 1;
+  text-align: center;
+  color: #fff;
+  background-color: #ff7700;
+  border-radius: 4px;
+  box-shadow: inset 0 -2px #ff5500;
+  text-decoration: none;
+}

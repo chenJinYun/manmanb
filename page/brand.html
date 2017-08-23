@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价网--手机版--品牌大全</title>
+    <link rel="icon" type="image/x_icon" href="favicon.ico">
+    <link rel="stylesheet" href="../css/clqcommon.css">
+    <link rel="stylesheet" href="../css/brand.css">
+    <script src="../script/libs/html5shiv.js"></script>
+</head>
+
+<body>
+    <!--最外层容器-->
+    <div class="index-layout">
+        <!--顶部搜索栏-->
+        <header>
+            <div class="top">
+                <div id="Logo">
+                    <a href="#">
+                    <img src="../images/header_logo.png" alt="">
+                </a>
+                </div>
+                <div id="downLoad">
+                    <a href="http://m.manmanbuy.com/?o=download">
+                    <img src="../images/header_app.png" alt="">
+                </a>
+                </div>
+            </div>
+            <form class="search">
+                <div class="headSearch">
+                    <div class="searchText">
+                        <input type="search" placeholder="请输入您想要比价的商品">
+                    </div>
+                    <div class="searchBtn">
+                        <input type="submit" value="搜索">
+                    </div>
+                </div>
+            </form>
+        </header>
+        <!--品牌大全列表-->
+        <section>
+            <form action="aspnetForm">
+                <nav>
+                    <a href="../index.html">首页</a>&nbsp;&gt;&nbsp;<a href="#">品牌大全</a>
+                </nav>
+                <div class="ultop">
+                    <div class="title">热门品牌排行</div>
+                    <div class="list">
+                    </div>
+                </div>
+            </form>
+        </section>
+        <div class="promotionAdd">
+            <a class="closefix" href="javascript:;"></a>
+            <div class="icon"></div>
+            <p class="titlefix">慢慢买</p>
+            <p class="describe">全网比价,查历史价格</p>
+            <a class="download-btn" href="#">立即打开</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+<script src="../script/libs/artTemplate/template.js"></script>
+<script src="../script/libs/jquery-cookie/jquery.cookie.js"></script>
+<script type="text/template" id="ultopList">
+    {{each result as value i}}
+    <div class="flt">
+        <a href='listStop.html?id={{value.brandTitleId}}'>{{value.brandTitle}}</a>
+    </div>
+    {{/each}}
+</script>
+<script>
+    var localStorage =window.localStorage;
+    $(function () {
+        var titleName = '';
+        $.ajax({
+            url: 'http://139.199.192.48:9090/api/getbrandtitle',
+            success: function (result) {
+                var html = template('ultopList', result);
+//                console.log(result);
+                $('.ultop .list').html(html);
+            }
+        });//请求品牌列表数据
+        // 点击底部关闭按钮隐藏广告
+        $('.closefix').on('click', function () {
+            $('.promotionAdd').css('display', 'none');
+        });
+        // 存储当前当前品牌的名称
+        $('.ultop .list').on('click','a', function () {
+            localStorage.setItem('titleName',$(this).text());
+            location.href = $(this).attr('href');
+//            alert(localStorage.getItem('titleName'));
+            return false;
+        });
+    })
+
+</script>

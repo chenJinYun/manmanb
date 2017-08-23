@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>肯德基优惠</title>
+    <link rel="icon" type="image/x_icon" href="favicon.ico">
+    <link rel="stylesheet" type="" href="../script/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="" href="../script/libs/swiper/swiper.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/product_list.css">
+    <style>
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 200px;
+            margin: 150px auto;
+        }
+
+        .swiper-slide {
+            width: 100%;
+            text-align: center;
+            font-size: 18px;
+            background: transparent;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+    </style>
+    <script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+    <script src="../script/libs/artTemplate/template.js"> </script>
+    <script src="../script/libs/swiper/swiper.min.js"></script>
+
+</head>
+
+<body>
+    <div class="layer">
+        <!--轮播图-->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+            </div>
+        </div>
+    </div>
+    <div class="head">
+        <div class="back">
+            <a href="privilege.html" ><i class="glyphicon glyphicon-menu-left"></i></a>
+        </div>
+        <h1>
+            肯德基优惠
+        </h1>
+        <div class="home">
+            <a href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('header部下载');" class="icon-app"></a>
+        </div>
+    </div>
+    <!--产品界面-->
+    <div class="productmain_list">
+        <div class="discount">
+            --点餐前出示手机中的优惠券，即可享受优惠--
+        </div>
+        <div class="quan_box">
+            <div class="quan_list ly">
+            </div>
+        </div>
+    </div>
+    <!--底部-->
+    <div class="footer">
+        <div class="nav_foot">
+            <a href="../index.html"><span>首页</span></a>
+            <span>&gt</span>
+            <span>优惠券</span>
+            <span>&gt</span>
+            <span>肯德基优惠券</span>
+        </div>
+        <div class="foot_top">
+
+            <a href="http://m.manmanbuy.com/login.aspx">登录</a>
+            <a href="reg.aspx">注册</a> <a href="#" style="width: 40%; border: 0;">
+                <img src="http://www.zuyushop.com/wap/images/top.jpg" width="15" height="15">返回顶部</a>
+        </div>
+        <div class="foot_last">
+            <p>
+                <a id="bb" href="http://m.manmanbuy.com/?o=download" onclick="trackEvent('footer头部下载');" style="color: Red;">手机APP下载</a>                <a href="http://m.manmanbuy.com">
+                    慢慢买手机版</a> -- 掌上比价平台</p>
+            <p>
+                m.manmanbuy.com
+
+                <img src="http://c.cnzz.com/wapstat.php?siteid=1256699064&amp;r=http%3a%2f%2fm.manmanbuy.com%2f&amp;rnd=724427416" width="0"
+                    height="0">
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="template/html" id="tpl_foodlist">
+    <ul>
+        {{each result as value i}}
+        <li>
+            <a href="">
+               {{#value.couponProductImg}}
+                <div class="info">
+                     <div class="tit">           
+                        <h3>{{value.couponProductName}}</h3>
+                        <h2>{{value.couponProductPrice}}</h2>           
+                     </div>
+                    <div class="time">{{value.couponProductTime}}</div>
+
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!--swiper轮播图模板-->
+<script type="template/html" id="lbl">
+    {{each result as value i}}
+    <div class="swiper-slide">{{#value.couponProductImg}}</div>
+    {{/each}}
+
+</script>
+<script src="../script/js/product_list.js"></script>

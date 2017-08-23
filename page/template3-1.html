@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 移动端开发 设置视口 -->
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>慢慢买比价网--手机版</title>
+  <link rel="icon" type="image/x_icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="../css/template3-1.css">
+
+</head>
+
+<body>
+  <!--head部分-->
+  <div class="header">
+    <div class="logo ">
+      <a href="../index.html">
+        <spand>&lt</spand>
+      </a>
+    </div>
+    <div class="shenqian">
+      <a href="template3-1.html">
+        <h3>
+          省钱控 - 最新优惠
+        </h3>
+      </a>
+    </div>
+    <div class="app ">
+      <a href="#">
+        <img src="../images/header_app.png" alt="手机app下载">
+      </a>
+    </div>
+  </div>
+  <!--白色背景-->
+  <div class="dingwei">
+
+  </div>
+  <div class="zk_list">
+    <ul>
+      <!--<li>
+        <a href="#">
+          <div class="zk_shangpin">
+            <img src="../images/ic_cu.png" width="100px" height="100px" alt="">
+          </div>
+          <div class="zk_wenzi ">
+            <div class="zk_jieshao">"Kelon 科龙 KFR-50LW/VIFDBp-A1(1P38) 2匹 变频冷暖 立柜式空调"
+              <span>4999元包邮</span>
+            </div>
+            <div class="zk_shijian">
+              <span class="">京东商城 | 08-21 15:18</span>
+              <span class="fr"><i>评论:</i> 0</span>
+            </div>
+          </div>
+        </a>
+      </li>-->
+
+
+    </ul>
+    <!--分页区-->
+    <table id="fenye">
+      <tbody>
+        <!--<tr>
+          <td><a href="#">上一页</a></td>
+          <td><span>1</span> / <span>2</span></td>
+          <td><a href="#">下一页</a></td>
+        </tr>-->
+      </tbody>
+    </table>
+
+  </div>
+
+  <!--省钱控-->
+  <div class="shengqian ">
+    <span><a href="../index.html">首页</a>&gt 省钱控</span>
+  </div>
+
+  <!--foot部分-->
+  <div class="sy_foot">
+    <div class="foot_btn">
+      <a href="#">登录</a>
+      <a href="#">注册</a>
+      <a id="bk_top" href="javascript:void(0)"><img src="../images/top.jpg">返回顶部</a>
+    </div>
+    <div class="foot_wz">
+      <p>
+        <a href="#">手机app下载</a>
+        <a href="#">慢慢买手机版</a> --掌上比价平台
+      </p>
+      <p>
+        m.manmanbuy.com
+      </p>
+    </div>
+  </div>
+  <!--app下载-->
+  <div class="man_app">
+    <a href="http://m.manmanbuy.com/?o=download"><img src="../images/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" width="60"></a>
+  </div>
+</body>
+
+</html>
+<!--最新优惠-->
+<script type="template/html" id="zk_yohui">
+  {{each result as v i}}
+  <li>
+    <a href="prodMsg.html?productid={{v.productId}}">
+      <div class="zk_shangpin">
+        {{#v.productImgSm}}
+      </div>
+      <div class="zk_wenzi ">
+        <div class="zk_jieshao">"{{v.productName}}"
+          <span>{{v.productPinkage}}</span>
+        </div>
+        <div class="zk_shijian">
+          <span class="">{{v.productFrom}} | {{v.productTime}}</span>
+          <span class="fr"><i>评论:</i> {{v.productComCount}}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+  {{/each}}
+</script>
+<script type="template/html" id="fy_td">
+  <tr>
+    <td><a class="prev" href="javascript:void(0)">上一页</a></td>
+    <td><span>{{pageNum}}</span> / <span>{{pageCount}}</span></td>
+    <td><a class="next" href="javascript:void(0)">下一页</a></td>
+  </tr>
+</script>
+
+<script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+<script src="../script/libs/artTemplate/template.js"></script>
+<script src="../script/js/template3-1.js"></script>

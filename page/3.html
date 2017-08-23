@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>多少钱</title>
+    <link rel="icon" type="image/x_icon" href="page/favicon.ico">
+    <link rel="stylesheet" href="../css/dwbase.css">
+    <link rel="stylesheet" href="../script/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/3.css">
+</head>
+
+<body class="left_menu">
+    <!--顶部-->
+    <div class="top">
+        <div class="logo">
+            <img src="../images/header_logo.png" alt="">
+        </div>
+        <div class="appDown">
+            <img src="../images/header_app.png" alt="">
+        </div>
+    </div>
+
+    <!--搜索框-->
+    <div class="search" id="search">
+        <input class="text" type="text" placeholder="请输入你想比价的商品">
+        <input class="btn" type="button" value="搜 索">
+    </div>
+
+    <!--首页 > 全部分类 > 电视 >-->
+    <div class="select">
+        <ul>
+            <li class="fl">
+                <a href="../index.html"><span>首页</span><i>&nbsp;>&nbsp;</i></a>
+            </li>
+            <li class="fl" id="all">
+                <span>全部分类</span><i>&nbsp;>&nbsp;</i>
+            </li>
+            <li class="fl" id="category">
+                <span></span><i>&nbsp;>&nbsp;</i>
+            </li>
+        </ul>
+        <input class="sx fr" type="button" value="筛 选">
+    </div>
+    <!--商品信息-->
+    <div id="content">
+    </div>
+    <!--历史最低价-->
+    <div class="lowP">
+        <p class="prev">该商品的历史最低价：6388.00 ></p>
+        <p class="next"> * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。</p>
+    </div>
+    <!--优选网友评论-->
+    <!--阴影-->
+    <div class="yy">
+        <div class="line"></div>
+        网友优选评论
+    </div>
+
+    <!--详细评论-->
+    <div class="comment" id="comment">
+
+    </div>
+
+    <!--查看更多评价-->
+    <div class="more">
+        <button>查看更多评价</button>
+    </div>
+    <!--返回顶部-->
+    <div class="back .container-fluid">
+        <div class="row">
+            <div class="log col-xs-4">登录</div>
+            <div class="reg col-xs-4">注册</div>
+            <div class="bt col-xs-4 "><a style="color:#333; text-decoration: none" href="#top">返回顶部</a><i class="iconfont">&#xe60a;</i></div>
+        </div>
+        <!--下载app-->
+        <div class="appDown">
+            <p class="p1"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+
+    <script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+    <script src="../script/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="../script/libs/artTemplate/template.js"></script>
+    <script src="../script/js/swiper.js"></script>
+    <script src="../script/js/dw.js"></script>
+
+
+    <script type="template/html" id="tpl_1_1">
+        <div class="info">
+            <div class="pic">{{=result[0].productImg}}</div>
+            <div class="wz">{{result[0].productName}}</div>
+            <div class="zdj">
+                <span>
+                <span class="dqzd">当前最低&nbsp;:&nbsp;</span><em>￥</em><span>3999.00</span>
+                </span>
+                <span class="yxpl"><span>优选评论&nbsp;:&nbsp;</span><i>1230</i>条</span>
+            </div>
+        </div>
+
+        <div class="argu">
+            <ul>
+                <li class="fl">比价购买</li>
+                <li class="fl">产品参数</li>
+                <li class="fl">优选评价</li>
+            </ul>
+        </div>
+
+        <div class="other">
+            {{=result[0].bjShop}}
+        </div>
+    </script>
+
+    <script type="template/html" id="tpl_1_2">
+        {{each result as value i}}
+        <div class="box">
+            <div class="head">
+                <div class="fl">
+                    <p class="name">{{value.comName}}</p>
+                    <p class="star">
+                        <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'>
+                            <path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'
+                                transform='translate(0, 812) scale(1, -1)' />
+                        </svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'>
+                            <path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'
+                                transform='translate(0, 812) scale(1, -1)' />
+                        </svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'>
+                            <path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'
+                                transform='translate(0, 812) scale(1, -1)' />
+                        </svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'>
+                            <path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'
+                                transform='translate(0, 812) scale(1, -1)' />
+                        </svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'>
+                            <path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'
+                                transform='translate(0, 812) scale(1, -1)' />
+                        </svg>
+                    </p>
+                </div>
+                <div class="fr">
+                    <p class="date">{{comTime}}</p>
+                    <p class="come">购买自:京东商城</p>
+                </div>
+            </div>
+            <div class="content">{{value.comContent}}</div>
+            <!--<span class="line">回复</span>-->
+            <span class="line">回复</span>
+        </div>
+        {{/each}}
+    </script>
+
+    <script>
+        $(function () {
+            var GET = [];
+            var search = location.search;
+            var str = decodeURI(search).slice(1).split("&");
+            // console.log(str);
+            for (var i = 0; i < str.length; i++) {
+                GET[str[i].split("=")[0]] = str[i].split("=")[1];
+            }
+            // 商品品牌
+            var brand = GET.brand;
+            $("#category span").html(brand);
+            // 商品ID
+            var productid = Number(GET.productId);
+
+            // 获取商品详情
+            $.ajax({
+                url: "http://139.199.192.48:9090/api/getproduct",
+                type: "get",
+                data: { productid: productid },
+                success: function (data) {
+                    var html = template("tpl_1_1", data);
+                    $("#content").html(html);
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+
+            // 详细评论
+            $.ajax({
+                url: "http://139.199.192.48:9090/api/getproductcom",
+                type: "get",
+                data: { productid: productid },
+                success: function (data) {
+                    console.log(data);
+                    var html = template("tpl_1_2", data);
+                    $("#comment").html(html);
+
+                    $("#all").click(function(){
+                        location.href = "./1.html"
+                    });
+                },
+                error: function (error) {
+                    console.log(error);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

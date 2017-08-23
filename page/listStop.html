@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>慢慢买比价网--手机版--品牌大全</title>
+    <link rel="icon" type="image/x_icon" href="favicon.ico">
+    <link rel="stylesheet" href="../css/clqcommon.css">
+    <link rel="stylesheet" href="../css/listStop.css">
+    <script src="../script/libs/html5shiv.js"></script>
+</head>
+<body>
+    <!--最外层容器-->
+    <div class="index-layout">
+        <!--顶部搜索栏-->
+        <header>
+            <div class="top">
+                <div id="Logo">
+                    <a href="#">
+                    <img src="../images/header_logo.png" alt="">
+                </a>
+                </div>
+                <div id="downLoad">
+                    <a href="http://m.manmanbuy.com/?o=download">
+                    <img src="../images/header_app.png" alt="">
+                </a>
+                </div>
+            </div>
+            <form class="search">
+                <div class="headSearch">
+                    <div class="searchText">
+                        <input type="search" placeholder="请输入您想要比价的商品">
+                    </div>
+                    <div class="searchBtn">
+                        <input type="submit" value="搜索">
+                    </div>
+                </div>
+            </form>
+        </header>
+        <!--品牌大全列表-->
+        <section>
+            <div class="aspnetForm">
+                <nav>
+                    <a href="../index.html">首页</a>&nbsp;&gt;&nbsp;<a href="brand.html">品牌大全</a>&nbsp;&gt;&nbsp;<span class="navTitle">某某某哪个品牌好</span>
+                </nav>
+                <div class="ultop">
+                    <div class="hd">
+                        <h3>平板电视哪个牌子好</h3>
+                    </div>
+                    <div class="list">
+                        <!--品牌排名列表-->
+                    </div>
+                </div>
+                <div class="model">
+                    <div class="hd">
+                        <h3>平板电视产品销量排行</h3>
+                    </div>
+                    <div class="list">
+                        <!--品牌排名列表-->
+                    </div>
+                </div>
+                <div class="comment">
+                    <div class="hd">
+                        <h3>
+                            <a href="#">硬盘摄像机最有用的用户评论</a>
+                        </h3>
+                    </div>
+                    <div class="details">
+                        <!--品牌评价列表-->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="promotionAdd">
+            <a class="closefix" href="javascript:;"></a>
+            <div class="icon"></div>
+            <p class="titlefix">慢慢买</p>
+            <p class="describe">全网比价,查历史价格</p>
+            <a class="download-btn" href="#">立即打开</a>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+<script src="../script/libs/artTemplate/template.js"></script>
+<script src="../script/libs/jquery-cookie/jquery.cookie.js"></script>
+<!--品牌列表数据-->
+<script type="text/template" id="ultopList">
+    <ul>
+        {{each result as value i}}
+        <li>
+            <a href="#" title="{{value.productId}}">
+                    <em class="top1 top">{{i+1}}</em>
+                    <div class="inner">
+                        <div class="tit">{{value.brandName}}</div>
+                        <p>{{value.brandInfo}}</p>
+                    </div>
+                </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!--请求商品列表-->
+<script type="text/template" id="modelList">
+    <ul>
+        {{each result as value i}}
+        <li>
+            <a href="bijia.aspx?id=" +id class="data" data-id="{{value.productId}}">
+                <div class="pic">
+                    {{#value.productImg}}
+                </div>
+                <div class="info">
+                    <div class="tit">{{value.productName}}</div>
+                    <div class="price"><em>{{value.productPrice}}</em> <span class="star"><em class="star5"></em></span></div>
+                    <div class="other"><em>{{value.productQuote}}</em><em>{{value.productCom}}</em></div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<!--商品评价-->
+<script type="text/template" id="commentList">
+    <ul>
+        {{each result as result i}}
+        <li>
+            <a href="#">
+                <div class="protit">
+                    <div class="pic">{{#i==4?img[0]:img[i]}}</div>
+                    <div class="tit">{{data_id[i]}}</div>
+                </div>
+            </a>
+            <div class="plbox">
+                <a href="#">
+                    <div class="comName">{{result.comName}}：<span class="star">
+                        <em class="star5">
+                            <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024'><path fill='#ff9000' d='m496.52887,736.87439l112.46838,-346.20175l364.01178,0l-294.48053,-213.97614l112.4809,-346.2005l-294.48053,213.96616l-294.53922,-213.96616l112.48215,346.2005l-294.4818,213.97614l364.01427,0l112.5246,346.20175z'  transform='translate(0, 812) scale(1, -1)'/></svg>
+                        </em>
+                        </span><i>{{result.comTime}}</i></div>
+                    <div class="con">{{result.comContent}}</div>
+                </a>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+<script>
+       var localStorage =window.localStorage;
+    $(function () {
+        var imgArr = [];
+        var productNameArr = [];
+        var obj = {}
+        var data_id = '';
+        var search = location.search;//从URL问号开始截取
+        search = search.slice(1);//表示从第一个参数开始截取对象
+        var searchArr = search.split('=');
+
+        obj[searchArr[0]] = searchArr[1];
+        $.ajax({//请求品牌列表数据
+            url: 'http://139.199.192.48:9090/api/getbrand',
+            data: { brandtitleid: obj.id },
+            success: function (result) {
+                console.log(result);
+                // $('.comment .hd a').html(html);
+                var html = template('ultopList', result);
+                $('.ultop .list').html(html);
+            }
+        });//请求品牌列表数据
+        $.ajax({//请求商品列表
+            url: 'http://139.199.192.48:9090/api/getbrandproductlist',
+            data: { brandtitleid: obj.id, pagesize: 4 },
+            success: function (result) {
+                var html = template('modelList', result);
+                $('.model .list').html(html);
+                // 获取商品的ID
+                data_id = $('.model .list .data').attr('data-id');
+                // 获取商品名字
+                // 获取商品图片
+                for (var i = 0; i < result.result.length; i++) {
+                    imgArr[i] = result.result[i].productImg;
+                    productNameArr.push(result.result[i].productName);
+                }
+                img = result.result[data_id].productImg;
+                // 获取商品评价
+                $.ajax({//请求用户评价
+                    url: 'http://139.199.192.48:9090/api/getproductcom',
+                    data: { productid: data_id },
+                    success: function (result) {
+                        result.data_id = productNameArr;
+                        result.img = imgArr;
+                        var html = template('commentList', result);
+                        $('.comment .details').html(html);
+                    }
+                });//请求用户评价
+                // 点击底部关闭按钮隐藏广告
+                $('.closefix').on('click', function () {
+                    $('.promotionAdd').css('display', 'none');
+                });
+            }
+        });//请求商品列表
+        // 改标题
+        $('nav .navTitle').text(localStorage.getItem('titleName'));
+        $('.ultop .hd h3').text(localStorage.getItem('titleName').replace(/十大品牌/,'前十排名'));
+        $('.model .hd h3').text(localStorage.getItem('titleName').replace(/十大品牌/,'产品销量排行'));
+        $('.comment .hd h3 a').text(localStorage.getItem('titleName').replace(/十大品牌/,'最有用的用户评论'));
+        // alert(localStorage.getItem('titleName').slice(0,4));
+    })
+
+</script>

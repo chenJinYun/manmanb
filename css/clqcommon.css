@@ -1,0 +1,49 @@
+/*css��ʼ������*/
+html, body, h1, h2, h3, ul, li, dl, dt, dd, p, image, input ,form{
+    margin: 0;
+    padding: 0;
+}
+header,nav,article,section,aside,footer{
+    display:block;
+}
+a {
+    text-decoration: none;
+}
+ul {
+    list-style: none;
+}
+em {
+    font-style: normal;
+}
+img {
+    border: none;
+}
+i ,b {
+    font-style: normal;
+}
+h1, h2, h3, b {
+    font-weight: normal;
+}
+body {
+    background-color: #F6F6F6;
+    font: normal normal 12px Microsoft YaHei;
+    color: #666;
+}
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix:after {
+    content: '';
+    height: 0;
+    line-height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+input {outline:none;}

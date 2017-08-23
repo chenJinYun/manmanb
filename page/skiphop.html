@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>凑单品---慢慢买</title>
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/skiphop.css">
+    <link rel="icon" type="image/x_icon" href="favicon.ico">
+</head>
+
+<body>
+    <header>
+        <div class="left">
+            <i class="glyphicon glyphicon-menu-left"></i>
+        </div>
+        <div class="center">
+            <h1>凑单品</h1>
+        </div>
+        <div class="right">
+            <a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"></a>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li data-id='0'><a href="javascript:;">
+            京东
+            <i class="glyphicon glyphicon-triangle-bottom"></i>
+        </a></li>
+            <li data-id='0'><a href="javascript:;">
+            华东
+            <i class="glyphicon glyphicon-triangle-bottom"></i>
+        </a></li>
+            <li><a href="javascript:;">
+            全部价格
+            <i class="glyphicon glyphicon-triangle-bottom"></i>
+        </a></li>
+        </ul>
+
+        <div class="search">
+            <i class="glyphicon glyphicon-search"></i>
+        </div>
+    </nav>
+    <!-- 下拉框 -->
+    <ul id="Toolbox">
+    </ul>
+    <ul id="twoToolbox">
+    </ul>
+    <div id='search'>
+        <div class="input">
+            <i class="glyphicon glyphicon-search"></i>
+            <input type="text" placeholder="搜索你想要寻找的凑单品">
+            <input type="button" value="搜索">
+        </div>
+        <h3>排序</h3>
+        <ul>
+            <li><a href="javascript:;">销量</a></li>
+            <li><a href="javascript:;"  class="active">价格↑</a></li>
+            <li><a href="javascript:;">价格↓</a></li>
+        </ul>
+        <h3>分类</h3>
+        <ul>
+            <li><a href="javascript:;" class="active">全部</a></li>
+            <li><a href="javascript:;">家居</a></li>
+            <li><a href="javascript:;">数码</a></li>
+            <li><a href="javascript:;">办公</a></li>
+            <li><a href="javascript:;">个护</a></li>
+            <li><a href="javascript:;">食品</a></li>
+            <li><a href="javascript:;">母婴</a></li>
+            <li><a href="javascript:;">服饰</a></li>
+        </ul>
+    </div>
+    <div class="commodity">
+        <ul>
+            
+        </ul>
+    </div>
+
+
+</body>
+
+</html>
+<!-- 商品模板 -->
+<script type="text/template" id="tpl_commodity">
+    {{each result as value i}}
+    <li>
+        <img src="{{value.productImg}}" alt="">
+        <div class="text">
+            <p>{{value.productName}}</p>
+            <div class="price">
+                <span>{{value.productPrice}}</span>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<!-- 第一个下拉框模板 -->
+<script type="text/template" id="tpl_one_Toolbox">
+    {{each result as value i}}
+    <li data-id="{{value.shopId}}" {{if i==0}}class='active'{{/if}}><a href="javascript:;">{{value.shopName}}</a></li>
+    {{/each}}
+</script>
+<!-- 第二个下拉框模板 -->
+<script type="text/template" id="tpl_two_Toolbox">
+    {{each result as value i}}
+    <li data-id="{{value.areaId}}" {{if i==0}}class='active'{{/if}}><a href="javascript:;">{{value.areaName}}</a></li>
+    {{/each}}
+</script>
+<script src="../lib/jQuery/jquery-3.1.1.min.js"></script>
+<script src="../lib/artTemplate/template.js"></script>
+<script src='../script/skiphop.js'></script>

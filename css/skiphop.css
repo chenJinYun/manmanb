@@ -1,0 +1,269 @@
+/* 头部 */
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color:#ccc;
+}
+
+header {
+    width: 100%;
+    height: 44px;
+    background-color: #ff8b00;
+    display: flex;
+}
+header .left a{
+    display:inline-block;
+    height: 44px;
+    width: 40px;
+    color:#fff;
+}
+header .left {
+    color: #fff;
+    line-height: 44px;
+    float: left;
+    margin-left: 10px;
+}
+
+header .center {
+    flex: 1;
+    text-align: center;
+    color: #fff;
+}
+
+header h1 {
+    font: normal normal 20px/44px '微软雅黑';
+}
+
+header .right a {
+    display: inline-block;
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    background-image: url(../images/header_app.png);
+    background-size: 34px 34px;
+    background-origin: content-box;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
+
+header .right img {
+    width: 38px;
+    height: 38px;
+}
+
+
+/* nva */
+
+#Toolbox {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+#Toolbox li {
+    width: 100%;
+    font: normal normal 16px/40px '微软雅黑';
+    border-bottom: 1px solid #ccc;
+    text-indent: 4px;
+}
+#Toolbox li.active:after{
+    content: '√';
+    display: inline-block;
+    float:right;
+    margin-right:20px;
+    color:red;
+    font-size:20px;
+    clear: both;
+}
+#Toolbox li a {
+    color: #666;
+}
+#twoToolbox {
+    position: absolute;
+    top: 82px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+#twoToolbox li {
+    width: 100%;
+    font: normal normal 16px/40px '微软雅黑';
+    border-bottom: 1px solid #ccc;
+    text-indent: 4px;
+}
+#twoToolbox li.active:after{
+    content: '√';
+    display: inline-block;
+    float:right;
+    margin-right:20px;
+    color:red;
+    font-size:20px;
+    clear: both;
+}
+#twoToolbox li a {
+    color: #666;
+}
+
+nav {
+    background-color:#fff;
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #ccc;
+}
+
+nav ul {
+    height: 37px;
+    display: flex;
+    flex: 1;
+    border-right: 1px solid #ccc;
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+    font: normal normal 16px/37px '微软雅黑';
+}
+
+nav ul li a i {
+    /* font-size: 12px; */
+}
+
+nav ul li a {
+    width: 100%;
+    height: 100%;
+    color: #666;
+}
+
+nav .search {
+    width: 47px;
+    height: 37px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 37px;
+    color: #666;
+}
+
+
+/* 搜索按钮下的样式 */
+
+#search {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 82px;
+    left: 0;
+    background-color: #eee;
+    padding: 4px;
+}
+#search .input i{
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+#search .input{
+    display: flex; 
+    position: relative;
+}
+#search .input input[type=button]{
+    width: 40px;
+    height: 35px;
+    margin-left: 4px;
+    background-color:#eee;
+}
+#search .input input[type=text]{
+    flex:1;
+    text-indent:2em;
+}
+#search h3 {
+    font: normal 700 16px/40px '微软雅黑'
+}
+
+#search ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+#search li a.active{
+    color:#fff;
+    background-color:#ff8b00;
+}
+#search li {
+    width: 25%;
+    padding: 4px;
+    text-align: center;
+    line-height: 20px;
+}
+
+#search li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    color: #433;
+}
+
+
+/* 商品列表 */
+
+.commodity {
+    background-color: #ddd;
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+}
+
+.commodity ul li {
+    float: left;
+    padding: 4px;
+    width: 50%;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+}
+
+.commodity ul li img {
+    width: 100%;
+    height: 180px;
+}
+
+.commodity ul li .text {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    padding: 0px 2px;
+    background-color: #fff;
+}
+
+.commodity ul li .text p {
+    font-size: 12px;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.commodity ul li .text .price {
+    flex:1;
+    font-size: 20px;
+    color: #ff8b00;
+}
+.commodity ul li .text .price:first-letter{
+    font-size:12px;
+}
+.commodity ul li .text .price span:nth-of-type(2){
+    float: right;
+    display: inline-block;
+    background-color:#ff8b00;
+    width: 50px;
+    height: 20px;
+    color:white;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+    margin-top: 3px;
+    padding: 0;
+}

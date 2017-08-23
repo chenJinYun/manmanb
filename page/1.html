@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>产品分类 - 慢慢买比价网</title>
+  <link rel="icon" type="image/x_icon" href="page/favicon.ico">
+  <link rel="stylesheet" href="../css/dwbase.css">
+  <link rel="stylesheet" href="../script/libs/bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/1.css">
+</head>
+
+<body class="left_menu">
+  <!--顶部-->
+  <div class="top">
+    <div class="logo">
+      <img src="../images/header_logo.png" alt="">
+    </div>
+    <div class="appDown">
+      <img src="../images/header_app.png" alt="">
+    </div>
+  </div>
+
+  <!--搜索框-->
+  <div class="search" id="search">
+    <input class="text" type="text" placeholder="请输入你想比价的商品">
+    <input class="btn" type="button" value="搜 索">
+  </div>
+  <!--下拉列表-->
+  <div class="list down" id="list_1">
+  </div>
+
+  <!--返回顶部-->
+  <div class="back .container-fluid">
+    <div class="row">
+      <div class="log col-xs-4">登录</div>
+      <div class="reg col-xs-4">注册</div>
+      <div class="bt col-xs-4 ">返回顶部<i class="iconfont">&#xe60a;</i></div>
+    </div>
+    <!--下载app-->
+    <div class="appDown">
+      <p class="p1"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+      <p>m.manmanbuy.com</p>
+    </div>
+  </div>
+
+
+  <script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+  <script src="../script/libs/bootstrap/js/bootstrap.js"></script>
+  <script src="../script/libs/artTemplate/template.js"></script>
+  <script src="../script/js/swiper.js"></script>
+
+
+
+  <script type="template/html" id="tpl_1_1">
+    {{each result as value i}}
+    <div id="dropdown" class="dropdown" data-titleId="{{value.titleId}}">
+      <li class="btn dropdown-toggle" id="dropdownMenu1" aria-haspopup="true" aria-expanded="true">
+        <span class="fl">{{value.title}}</span>
+        <span class="jiantou fr iconfont">&#xe627;</span>
+      </li>
+      <ul id="dropdown-menu" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+      </ul>
+    </div>
+    {{/each}}
+  </script>
+
+  <!--************************分类标题结束****************************-->
+  <script>
+    $.ajax({
+      url: "http://139.199.192.48:9090/api/getcategorytitle",
+      type: "get",
+      success: function (data) {
+        var html = template("tpl_1_1", data);
+        $("#list_1").html(html);
+      },
+      error: function (err) {
+        console.log(err);
+      }
+    });
+
+    //-------------------------------分类标题结束---------------------------------
+
+
+
+
+    //-------------------------------分类列表开始---------------------------------
+    // 获取被点击元素上的自定义属性值
+    $("#list_1").on("click", "#dropdown", function () {
+      var titleid = $(this).attr("data-titleId");
+      var _this = this;
+      $(_this).find("#dropdown-menu").html("");
+      $.ajax({
+        url: "http://139.199.192.48:9090/api/getcategory",
+        type: "get",
+        data: { titleid: titleid },
+        success: function (data) {
+          for (var i = 0; i < data.result.length; i++) {
+            // 创建元素
+            var li = $("<li>");
+            li.prop("class", "fl");
+            li.attr("categoryId", "" + data.result[i].categoryId);
+            var a = $("<a>");
+            a.prop("href", "#");
+            a.html(data.result[i].category);
+            li.append(a);
+            $(_this).find("#dropdown-menu").append(li);
+          }
+          // 点击商品名称跳转
+          $("#list_1 .dropdown-menu").on("click", "li", function () {
+            // 传递ID
+            var categoryId = $(this).attr("categoryid");
+            location.href = "./2.html?categoryId=" + categoryId;
+          });
+        },
+        error: function (err) {
+          console.log(err);
+        }
+      });
+    });
+//-------------------------------分类列表结束---------------------------------
+  </script>
+  <script src="../script/js/dw.js"></script>
+</body>
+
+</html>

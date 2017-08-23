@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>电视机比价选购，电视机推荐哪个好 -- 慢慢买手机版</title>
+    <link rel="icon" type="image/x_icon" href="page/favicon.ico">
+    <link rel="stylesheet" href="../css/dwbase.css">
+    <link rel="stylesheet" href="../script/libs/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../css/2.css">
+</head>
+
+<body class="left_menu">
+    <!--顶部-->
+    <div class="top">
+        <div class="logo">
+            <img src="../images/header_logo.png" alt="">
+        </div>
+        <div class="appDown">
+            <img src="../images/header_app.png" alt="">
+        </div>
+    </div>
+
+    <!--搜索框-->
+    <div class="search" id="search">
+        <input class="text" type="text" placeholder="请输入你想比价的商品">
+        <input class="btn" type="button" value="搜 索">
+    </div>
+
+    <!--首页 > 全部分类 > 电视 >-->
+    <div class="select">
+        <ul>
+            <li class="fl index">
+                <a href="../index.html"><span>首页</span><i>&nbsp;>&nbsp;</i></a>
+            </li>
+            <li class="fl" id="fenlei">
+                <span>全部分类</span><i>&nbsp;>&nbsp;</i>
+            </li>
+            <li class="category fl" id="category">
+                <span></span><i>&nbsp;>&nbsp;</i>
+            </li>
+        </ul>
+        <input class="sx fr" type="button" value="筛 选">
+    </div>
+
+    <div class="content" id="content">
+    </div>
+    <div class="page">
+        <button class="prevBtn">上一页</button>
+        <select class="ye" name="" id="">
+                <option value=""><i>1</i><i>&nbsp;/&nbsp;</i><i>3</i></option>
+                <option value=""><i>2</i><i>&nbsp;/&nbsp;</i><i>3</i></option>
+                <option value=""><i>3</i><i>&nbsp;/&nbsp;</i><i>3</i></option>
+            </select>
+        <button class="nextBtn">下一页</button>
+    </div>
+
+    <!--返回顶部-->
+    <div class="back .container-fluid">
+        <div class="row">
+            <div class="log col-xs-4">登录</div>
+            <div class="reg col-xs-4">注册</div>
+            <div class="bt col-xs-4 "><a style="color:#333; text-decoration: none" href="#top">返回顶部</a><i class="iconfont">&#xe60a;</i></div>
+        </div>
+        <!--下载app-->
+        <div class="appDown">
+            <p class="p1"><span>手机APP下载</span>慢慢买手机版--掌上比价平台</p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+
+    <script src="../script/libs/jQuery/jquery-1.12.2.js"></script>
+    <script src="../script/libs/bootstrap/js/bootstrap.js"></script>
+    <script src="../script/libs/artTemplate/template.js"></script>
+    <script src="../script/js/swiper.js"></script>
+
+
+    <script type="template/html" id="tpl_1_1">
+        {{each result as value i}}
+        <div class="searchList" id="searchList">
+            <div class="fl jpg">{{=value.productImg}}</div>
+            <div class="fr wz">
+                <span class="title">{{value.productName}}</span>
+                <span class="price">{{value.productPrice}}</span>
+                <span class="comment">
+                <span>{{value.productQuote}}</span>&nbsp;&nbsp;&nbsp;
+                <span>{{value.productCom}}</span>
+                </span>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+
+
+
+    <!--************************商品列表功能界面****************************-->
+    <script>
+        // 根据分类id获取分类名称api
+        var search = location.search.slice(1);
+        var categoryid = search.split("=")[1];
+        var categoryid = Number(categoryid);
+        $.ajax({
+            url: "http://139.199.192.48:9090/api/getcategorybyid",
+            type: "get",
+            data: { categoryid: categoryid },
+            success: function (data) {
+                $(".category span").html(data.result[0].category);
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+    </script>
+    <!--************************商品列表功能界面****************************-->
+
+
+    <!--************************商品列表****************************-->
+    <script>
+        $.ajax({
+            url: "http://139.199.192.48:9090/api/getproductlist",
+            type: "get",
+            data: { categoryid: categoryid, pageid: 1 },
+            success: function (data) {
+                var html = template("tpl_1_1", data);
+                $("#content").html(html);
+
+                // 点击全部分类跳转到全部分类
+                $("#fenlei").click(function () {
+                    location.href = "./1.html";
+                });
+                // 点击当前栏目刷本页面
+                $("#category").click(function () {
+                    location.href = "./2.html?categoryId=" + categoryid;
+                });
+
+                // 点击商品跳转到详情页
+                $("#content").on("click", "#searchList", function () {
+                    var index = $(this).index();
+                    // 获取当前被点击商品的品牌
+                    var brand = data.result[index].brandName
+                    // 被点击商品的id
+                    var productId = data.result[index].productId;
+                    // 跳转页面
+                    location.href = "./3.html?brand=" + brand + "&productId=" + productId;
+                });
+                console.log(data);
+
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+    </script>
+    <!--************************商品列表****************************-->
+
+    <script src="../script/js/dw.js"></script>
+</body>
+
+</html>
