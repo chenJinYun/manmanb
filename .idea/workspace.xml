@@ -31,11 +31,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="privilege.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="privilege.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/privilege.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.092857145">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="-3.1515152">
+              <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="storenav.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script/js/storenav.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skiphop.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/skiphop.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="skiphop.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/page/skiphop.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.74285716">
+              <caret line="111" column="31" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -78,7 +108,6 @@
         <option value="$PROJECT_DIR$/page/template3-1.html" />
         <option value="$PROJECT_DIR$/page/listStop.html" />
         <option value="$PROJECT_DIR$/page/storenav.html" />
-        <option value="$PROJECT_DIR$/page/skiphop.html" />
         <option value="$PROJECT_DIR$/css/skiphop.css" />
         <option value="$PROJECT_DIR$/css/vage.css" />
         <option value="$PROJECT_DIR$/css/1.css" />
@@ -92,6 +121,7 @@
         <option value="$PROJECT_DIR$/page/product_list.html" />
         <option value="$PROJECT_DIR$/page/list.html" />
         <option value="$PROJECT_DIR$/page/privilege.html" />
+        <option value="$PROJECT_DIR$/page/skiphop.html" />
       </list>
     </option>
   </component>
@@ -169,32 +199,6 @@
               <option name="myItemId" value="script" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="慢慢买项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="慢慢买项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="script" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="swiper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -224,25 +228,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="慢慢买项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="慢慢买项目" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fonts" />
+              <option name="myItemId" value="page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -311,7 +297,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16517857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -429,22 +415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13928571">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/page/skiphop.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5757575">
-          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/skiphop.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.233333">
-          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -580,8 +550,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/page/privilege.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.092857145">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="-3.1515152">
+          <caret line="4" column="26" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script/js/storenav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/skiphop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/page/skiphop.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74285716">
+          <caret line="111" column="31" selection-start-line="111" selection-start-column="31" selection-end-line="111" selection-end-column="31" />
           <folding />
         </state>
       </provider>
